@@ -1,13 +1,22 @@
+.topHeading {
+  color: #239ce2;
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
 .container {
   padding: 50px 30px;
   text-align: center;
   width: 100%;
+  background-color: rgb(238, 252, 255);
+  min-height: 85vh;
+}
+
+.content {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   gap: 30px;
-  background-color: rgb(238, 252, 255);
-  min-height: 85vh;
 }
 
 .heading {
@@ -27,5 +36,42 @@
 }
 
 .right img {
-  width: 400px;
+  width: 600px;
+  height: 400px;
+  animation: motionUpDown 2s infinite alternate ease-in-out;
+}
+
+@keyframes motionUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+.right img:hover {
+  animation: motionUpDownHover 2s infinite alternate ease-in-out;
+}
+
+@keyframes motionUpDownHover {
+  0% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.left p {
+  animation: textMotionLeftToRight 2s infinite alternate ease-in-out;
+}
+
+@keyframes textMotionLeftToRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(10px);
+  }
 }
